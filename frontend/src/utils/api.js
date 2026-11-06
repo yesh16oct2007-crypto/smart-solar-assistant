@@ -1,9 +1,20 @@
-// In production on Render/Vercel, set VITE_API_BASE (e.g. https://solar-assistant-backend.onrender.com/api)
-// In local development, defaults to direct backend on port 8000
-const API_BASE = import.meta.env.VITE_API_BASE || 
-  ((typeof window !== 'undefined' && (window.location.port === '5173' || window.location.port === '3000'))
-    ? 'http://127.0.0.1:8000/api'
-    : '/api');
+// Normalize API Base for both local dev and production on Render
+const rawEnvBase = import.meta.env.VITE_API_BASE;
+let API_BASE = '/api';
+
+if (rawEnvBase && rawEnvBase.trim()) {
+  let normalized = rawEnvBase.trim();
+  if (!normalized.startsWith('http://') && !normalized.startsWith('https://')) {
+    normalized = `https://${normalized}`;
+  }
+  if (!normalized.endsWith('/api')) {
+    normalized = `${normalized.replace(/\/$/, '')}/api`;
+  }
+  API_BASE = normalized;
+} else if (typeof window !== 'undefined' && (window.location.port === '5173' || window.location.port === '3000')) {
+  API_BASE = 'http://127.0.0.1:8000/api';
+}
+
 
 
 
