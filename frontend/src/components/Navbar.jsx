@@ -16,7 +16,6 @@ export default function Navbar({ activePage, setActivePage }) {
     { id: 'calculator', label: 'Cost Calculator' },
     { id: 'comparison', label: 'System Comparison' },
     { id: 'dashboard', label: 'Dashboard' },
-    { id: 'prompt-lab', label: 'Prompt Lab', isBadge: true, badgeText: 'B.Tech Lab' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
   ];

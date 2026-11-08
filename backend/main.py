@@ -25,15 +25,12 @@ from solar_engine import (
 )
 from gemini_service import (
     generate_ai_recommendation_explanation,
-    generate_chatbot_reply,
-    run_prompt_experiment,
-    PROMPT_TECHNIQUES
+    generate_chatbot_reply
 )
 from models import (
     RecommendationRequest,
     CalculatorRequest,
     ChatRequest,
-    PromptLabRequest,
     ContactRequest
 )
 
@@ -42,7 +39,7 @@ init_db()
 
 app = FastAPI(
     title="Smart Solar Energy Recommendation Assistant API",
-    description="Backend API powering solar PV sizing, financial calculations, Gemini AI explanations, and Prompt Engineering Lab.",
+    description="Production API powering solar PV sizing, financial calculations, MNRE subsidies, and Gemini AI energy advisory.",
     version="1.0.0"
 )
 
@@ -252,25 +249,6 @@ async def chat_endpoint(req: ChatRequest):
         "reply": resp["reply"],
         "source": resp["source"],
         "is_demo": resp.get("is_demo", False)
-    }
-
-@app.get("/api/prompt-lab/techniques")
-async def get_prompt_lab_techniques():
-    return {
-        "success": True,
-        "techniques": PROMPT_TECHNIQUES
-    }
-
-@app.post("/api/prompt-lab")
-async def prompt_lab_endpoint(req: PromptLabRequest):
-    result = await run_prompt_experiment(
-        technique=req.technique,
-        custom_system_prompt=req.custom_prompt,
-        user_inputs=req.site_inputs
-    )
-    return {
-        "success": True,
-        "data": result
     }
 
 @app.post("/api/contact")

@@ -33,11 +33,6 @@ class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1)
     history: Optional[List[ChatMessage]] = Field(default_factory=list)
 
-class PromptLabRequest(BaseModel):
-    technique: str = Field(..., example="role_based")
-    custom_prompt: str = Field(..., min_length=5)
-    site_inputs: Dict[str, Any]
-
 class ContactRequest(BaseModel):
     name: str = Field(..., min_length=2)
     email: str = Field(..., min_length=5)

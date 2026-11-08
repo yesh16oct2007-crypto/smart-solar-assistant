@@ -119,14 +119,14 @@ export default function HomePage({ setActivePage }) {
                   </div>
                 </div>
 
-                {/* Floating Metric Badge 2: Prompt Engineering Subject Badge */}
+                {/* Floating Metric Badge 2: Certified Green Standard */}
                 <div className="absolute top-2 -right-2 sm:right-0 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-emerald-100 flex items-center space-x-2.5">
                   <div className="w-8 h-8 rounded-lg bg-teal-500 text-white flex items-center justify-center">
-                    <Award className="w-4 h-4" />
+                    <ShieldCheck className="w-4 h-4" />
                   </div>
                   <div>
-                    <div className="text-[10px] text-slate-400 font-semibold uppercase">Academic Project</div>
-                    <div className="text-xs font-bold text-emerald-800">Prompt Engineering Lab</div>
+                    <div className="text-[10px] text-slate-400 font-semibold uppercase">National Standards</div>
+                    <div className="text-xs font-bold text-emerald-800">MNRE & CEA Compliant</div>
                   </div>
                 </div>
               </div>
@@ -255,27 +255,27 @@ export default function HomePage({ setActivePage }) {
             </button>
           </div>
 
-          {/* Feature 3: Prompt Lab */}
+          {/* Feature 3: Subsidy & Policy Guidance */}
           <div className="bg-gradient-to-br from-emerald-900 to-navy-900 text-white p-7 rounded-2xl shadow-md hover:shadow-xl transition-all flex flex-col justify-between border border-emerald-700">
             <div>
               <div className="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center justify-center mb-5">
-                <Sparkles className="w-6 h-6" />
+                <Award className="w-6 h-6" />
               </div>
               <div className="inline-block px-2.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-500 text-white mb-2 uppercase">
-                B.Tech Coursework Lab
+                PM Surya Ghar Ready
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
-                Prompt Engineering Lab
+                Subsidies & Policy Guidance
               </h3>
               <p className="text-sm text-slate-300 leading-relaxed mb-4">
-                Interactive demonstration of Role-based, Few-shot, Context-based, and Constraint-based prompting for generative AI solar audits.
+                Automated calculation of Central Financial Assistance (up to ₹78,000 for residential systems) and 40% accelerated depreciation tax benefits for commercial enterprises.
               </p>
             </div>
             <button
-              onClick={() => { setActivePage('prompt-lab'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              onClick={() => { setActivePage('recommendation'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="text-sm font-bold text-emerald-400 hover:text-emerald-300 flex items-center space-x-1.5"
             >
-              <span>Explore Prompt Lab</span>
+              <span>Calculate Your Subsidy</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

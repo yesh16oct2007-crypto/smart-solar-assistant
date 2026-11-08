@@ -28,7 +28,7 @@ export default function Footer({ setActivePage }) {
             </p>
             <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-800/60 text-xs text-emerald-300">
               <Award className="w-4 h-4 text-emerald-400 flex-shrink-0" />
-              <span>B.Tech Prompt Engineering Capstone Project</span>
+              <span>National Rooftop Solar Intelligence Platform</span>
             </div>
           </div>
 
@@ -73,27 +73,26 @@ export default function Footer({ setActivePage }) {
             </ul>
           </div>
 
-          {/* Prompt Engineering Lab */}
+          {/* Resources & Support */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              AI & Academics
+              Platform & Support
             </h4>
             <ul className="space-y-2.5 text-sm">
-              <li>
-                <button
-                  onClick={() => { setActivePage('prompt-lab'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="text-slate-400 hover:text-emerald-400 transition-colors flex items-center space-x-1"
-                >
-                  <span>Prompt Engineering Lab</span>
-                  <span className="text-[10px] bg-emerald-600 text-white px-1.5 py-0.2 rounded font-mono">NEW</span>
-                </button>
-              </li>
               <li>
                 <button
                   onClick={() => { setActivePage('about'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                   className="text-slate-400 hover:text-emerald-400 transition-colors"
                 >
-                  About the Project
+                  About the Platform
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => { setActivePage('comparison'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                  className="text-slate-400 hover:text-emerald-400 transition-colors"
+                >
+                  Technical Specifications
                 </button>
               </li>
               <li>
@@ -101,7 +100,7 @@ export default function Footer({ setActivePage }) {
                   onClick={() => { setActivePage('contact'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                   className="text-slate-400 hover:text-emerald-400 transition-colors"
                 >
-                  Contact & Feedback
+                  Contact & Advisory
                 </button>
               </li>
             </ul>

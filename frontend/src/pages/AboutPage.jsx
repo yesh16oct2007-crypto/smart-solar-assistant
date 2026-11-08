@@ -22,7 +22,7 @@ export default function AboutPage({ setActivePage }) {
     { name: 'Tailwind CSS', role: 'Design & Aesthetics', desc: 'Custom emerald green-energy color palette, glassmorphic panels, and responsive layout primitives.', icon: Layers },
     { name: 'FastAPI (Python)', role: 'Backend Microservice', desc: 'High-throughput asynchronous REST API providing deterministic sizing and financial calculation endpoints.', icon: Zap },
     { name: 'SQLite', role: 'Relational Database', desc: 'Lightweight zero-configuration relational database storing user solar audit histories and contact tickets.', icon: Database },
-    { name: 'Google Gemini API', role: 'Generative AI Engine', desc: 'Powers domain-specific engineering rationales, contextual chat, and the Prompt Engineering Lab.', icon: Sparkles },
+    { name: 'Google Gemini API', role: 'Generative AI Engine', desc: 'Powers domain-specific engineering audit rationales and contextual advisory through the SolarAI Assistant.', icon: Sparkles },
     { name: 'Recharts', role: 'Data Visualization', desc: 'Interactive charts rendering 25-year cumulative wealth curves and monthly expense comparison bars.', icon: LineChart },
   ];
 
@@ -40,13 +40,13 @@ export default function AboutPage({ setActivePage }) {
       <div className="text-center max-w-3xl mx-auto space-y-3">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800">
           <Award className="w-4 h-4 text-emerald-600" />
-          <span>Academic Project Overview</span>
+          <span>India Clean Energy Platform Overview</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-navy-900">
           About Smart Solar Assistant
         </h1>
         <p className="text-sm sm:text-base text-slate-600">
-          Bridging deterministic renewable energy modeling with advanced generative AI prompting for India's clean energy transition.
+          Empowering Indian households, institutions, and businesses with transparent rooftop PV sizing, verified PM Surya Ghar subsidies, and AI engineering intelligence.
         </p>
       </div>
 
@@ -98,7 +98,7 @@ export default function AboutPage({ setActivePage }) {
             </li>
             <li className="flex items-start space-x-2">
               <span className="text-emerald-600 font-bold">•</span>
-              <span><strong>Prompt Engineering Integration:</strong> An educational showcase demonstrating how Role, Context, Few-Shot, and Constraint prompting unlock actionable AI audit advice.</span>
+              <span><strong>AI Audit Rationale Layer:</strong> Leverages Gemini AI to generate audit-grade engineering justifications covering inverter DC:AC ratios, CEA safety earthing, and DISCOM net-metering synchronization.</span>
             </li>
           </ul>
         </div>

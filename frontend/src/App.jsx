@@ -7,7 +7,6 @@ import RecommendationPage from './pages/RecommendationPage';
 import CalculatorPage from './pages/CalculatorPage';
 import ComparisonPage from './pages/ComparisonPage';
 import DashboardPage from './pages/DashboardPage';
-import PromptLabPage from './pages/PromptLabPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
@@ -15,7 +14,7 @@ export default function App() {
   // Sync page state with URL hash
   const getInitialPage = () => {
     const hash = window.location.hash.replace('#', '').trim();
-    const validPages = ['home', 'recommendation', 'calculator', 'comparison', 'dashboard', 'prompt-lab', 'about', 'contact'];
+    const validPages = ['home', 'recommendation', 'calculator', 'comparison', 'dashboard', 'about', 'contact'];
     return validPages.includes(hash) ? hash : 'home';
   };
 
@@ -33,7 +32,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '').trim();
-      const validPages = ['home', 'recommendation', 'calculator', 'comparison', 'dashboard', 'prompt-lab', 'about', 'contact'];
+      const validPages = ['home', 'recommendation', 'calculator', 'comparison', 'dashboard', 'about', 'contact'];
       if (validPages.includes(hash)) {
         setActivePage(hash);
       }
@@ -73,9 +72,6 @@ export default function App() {
             setActivePage={handlePageChange} 
             sharedRecommendation={sharedRecommendation} 
           />
-        )}
-        {activePage === 'prompt-lab' && (
-          <PromptLabPage />
         )}
         {activePage === 'about' && (
           <AboutPage setActivePage={handlePageChange} />

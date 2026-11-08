@@ -1,12 +1,12 @@
 # ☀️ Smart Solar Energy Recommendation Assistant
-> **B.Tech Prompt Engineering Coursework Capstone Project**  
-> An AI-powered full-stack web application recommending rooftop solar PV systems for Indian homes, colleges, offices, and industrial hubs.
+> **AI-Powered Solar Energy Sizing, Financial Advisory & Subsidy Intelligence Platform for India**  
+> An engineering-grade full-stack web application recommending optimal rooftop solar PV systems for Indian homes, institutions, commercial facilities, and industrial plants.
 
 ---
 
 ## 🌟 Overview & Key Features
 
-**Smart Solar Energy Recommendation Assistant** is an engineering-grade web application built to accelerate India's transition to clean energy. It combines **deterministic renewable energy physics modeling** with **Google Gemini generative AI** to deliver transparent, subsidy-eligible, and technically compliant solar solutions.
+**Smart Solar Energy Recommendation Assistant** is a production-grade web application built to accelerate India's transition to clean energy. It combines **deterministic renewable energy physics modeling** with **Google Gemini generative AI** to deliver transparent, subsidy-eligible, and technically compliant solar solutions.
 
 ### 🚀 Highlights & Features
 1. **Home Page**:
@@ -26,18 +26,9 @@
 5. **System Sizing & Comparison**:
    - Side-by-side capacity comparison for **1 kW, 3 kW, 5 kW, and 10 kW** systems.
    - Architecture comparison for **On-Grid (Grid-Tied)** vs **Hybrid (Battery Backup)** vs **Off-Grid (Standalone)**.
-6. **Prompt Engineering Lab (Core B.Tech Subject Showcase)**:
-   - Interactive laboratory demonstrating 6 fundamental prompt engineering strategies:
-     * **Role-Based Prompting** (MNRE Tier-1 Auditor Persona)
-     * **Context-Based Prompting** (GHI solar radiation, DISCOM tariff slabs, ambient temperature derating)
-     * **Few-Shot Prompting** (Exemplar-guided 5-step mathematical progression)
-     * **Constraint-Based Prompting** (Rooftop walkway setbacks, single-phase 5 kW limits, budget guards)
-     * **Structured JSON Output** (Constraining generation to strict schemas for downstream software)
-     * **Prompt Comparison & Ablation** (Side-by-side naive vs augmented outputs with token count & latency metrics)
-   - Pedagogical explanations clarifying the difference between deterministic mathematical calculations and probabilistic LLM reasoning.
-7. **Executive Dashboard**:
+6. **Executive Dashboard**:
    - Analytics KPI cards, Monthly Electricity Bill Comparison chart (Before vs After Solar), 25-Year Cumulative Savings Trajectory, and SQLite-backed recommendation history with detail modals.
-8. **Contact & Consultation**:
+7. **Contact & Consultation**:
    - Form with input validation (Email, 10-digit Indian mobile number) and real persistence to SQLite (`contacts` table) with ticket tracking reference (`SOLAR-XXXX`).
 
 ---
@@ -213,15 +204,10 @@ Open a **new separate terminal window** in the project root:
 2. **Test Solar Cost Calculator**:
    - Go to `http://localhost:5173/#calculator`
    - Move the Capacity slider and Tariff slider; observe instant 60fps recalculations of the 25-year cumulative wealth curve.
-3. **Test Prompt Engineering Lab**:
-   - Go to `http://localhost:5173/#prompt-lab`
-   - Select a technique (e.g., **Role-Based** or **Structured JSON**).
-   - Click **Execute Prompt Comparison & Ablation**.
-   - Review the side-by-side comparison between the naive baseline prompt and the engineered prompt with latency and token metrics.
-4. **Test SolarAI Floating Chatbot**:
+3. **Test SolarAI Floating Chatbot**:
    - Click the floating **SolarAI Assistant** button in the bottom right corner.
    - Ask: *"What is the PM Surya Ghar subsidy for a 3kW system?"* or *"What is the difference between On-grid and Hybrid?"*
-5. **Test Contact Submission**:
+4. **Test Contact Submission**:
    - Go to `http://localhost:5173/#contact`
    - Submit a test inquiry; observe the assigned ticket number (e.g. `SOLAR-0001`) and view it in the submitted inquiries log.
 
@@ -238,13 +224,10 @@ Open a **new separate terminal window** in the project root:
 | `DELETE` | `/api/recommendations/{id}` | Deletes a stored recommendation record |
 | `POST` | `/api/calculate` | Interactive calculator for customized financial & degradation curves |
 | `POST` | `/api/chat` | SolarAI chatbot assistant powered by Gemini API / knowledge base |
-| `GET` | `/api/prompt-lab/techniques` | Returns available prompting strategies |
-| `POST` | `/api/prompt-lab` | Executes prompt comparison (naive baseline vs augmented prompt) |
 | `POST` | `/api/contact` | Validates inquiry and stores into SQLite contacts table |
 | `GET` | `/api/contacts` | Retrieves submitted inquiry logs |
 
 ---
 
-## 🏛️ Academic Note & License
-Developed as a capstone project for the **B.Tech Prompt Engineering Coursework**.  
-Designed to demonstrate practical generative AI prompt architectures, hybrid physics-LLM design patterns, and sustainable energy economics in India.
+## 🏛️ Production & Deployment Ready
+Architected for rapid deployment to **Render**, **Vercel**, or **AWS/GCP** with full SQLite persistence, robust error boundaries, and adaptive mobile responsive layouts.

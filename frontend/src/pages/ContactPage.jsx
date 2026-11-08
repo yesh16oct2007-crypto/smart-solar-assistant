@@ -120,7 +120,7 @@ export default function ContactPage() {
           Contact & Consultation
         </h1>
         <p className="text-sm sm:text-base text-slate-600">
-          Have questions regarding PM Surya Ghar subsidy registration, commercial rooftop audits, or our B.Tech Prompt Engineering architecture? Send us a validated message.
+          Have questions regarding PM Surya Ghar subsidy registration, commercial rooftop audits, or clean energy sizing? Send us a validated message.
         </p>
       </div>
 
@@ -131,7 +131,7 @@ export default function ContactPage() {
           
           <div className="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm space-y-6">
             <h3 className="text-lg font-bold text-navy-900 pb-2 border-b border-slate-100">
-              Project Lab & Coordination
+              Solar Intelligence Advisory Desk
             </h3>
 
             <div className="space-y-4 text-xs text-slate-600">
@@ -140,9 +140,9 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <strong className="text-navy-900 block text-xs">Academic Affiliation</strong>
-                  <span>Department of Computer Science & Engineering</span>
-                  <span className="block text-slate-400">Prompt Engineering Laboratory, India</span>
+                  <strong className="text-navy-900 block text-xs">National Advisory Desk</strong>
+                  <span>Clean Energy Technology Initiative</span>
+                  <span className="block text-slate-400">Rooftop Solar Intelligence, India</span>
                 </div>
               </div>
 
@@ -319,8 +319,8 @@ export default function ContactPage() {
               >
                 <option value="Residential Consultation">Residential Solar Sizing & PM Surya Ghar Subsidy</option>
                 <option value="Commercial Energy Audit">Commercial / Office Tariff Mitigation</option>
-                <option value="College Project Query">B.Tech Prompt Engineering Coursework Inquiry</option>
-                <option value="Technical Feedback">Bug Report / Feature Request</option>
+                <option value="Institutional Consultation">College & University Campus Solar Plant</option>
+                <option value="Technical Feedback">Platform Feedback / Vendor Collaboration</option>
               </select>
             </div>
 

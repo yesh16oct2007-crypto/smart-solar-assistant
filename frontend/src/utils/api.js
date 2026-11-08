@@ -87,22 +87,6 @@ export async function sendChatMessage(message, history = []) {
   return await res.json();
 }
 
-export async function fetchPromptLabTechniques() {
-  const res = await fetch(`${API_BASE}/prompt-lab/techniques`);
-  if (!res.ok) throw new Error('Failed to fetch prompt techniques');
-  return await res.json();
-}
-
-export async function runPromptLabExperiment(data) {
-  const res = await fetch(`${API_BASE}/prompt-lab`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  if (!res.ok) throw new Error('Prompt lab experiment failed');
-  return await res.json();
-}
-
 export async function submitContact(data) {
   const res = await fetch(`${API_BASE}/contact`, {
     method: 'POST',
